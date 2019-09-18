@@ -2,9 +2,9 @@ package com.example.bhaskara;
 
 public class Matematica {
 
-    public double Exponenciacao(double base, int expoente) {
+    public Double Exponenciacao(double base, int expoente) {
 
-        double resultado;
+        Double resultado;
         int potencia;
 
         /*if (expoente == 0) {
@@ -46,15 +46,15 @@ public class Matematica {
         return resultado;
     }
 
-    public double calculaDelta(double a, double b, double c){
-        double resultado;
+    public Double calculaDelta(double a, double b, double c){
+        Double resultado;
         resultado = Exponenciacao(b, 2) - 4 * a * c;
         //resultado = Math.pow(b, 2) -4 * a * c (jeito certo);
         return resultado;
 
     }
 
-    public double[] cauculaRaizesEq2Grau(double a, double b,double c){
+    public Double[] calculaRaizesEq2Grau(double a, double b,double c){
         /*double a, b, c;
         double x1;
         double x2;
@@ -63,16 +63,16 @@ public class Matematica {
         x1 = - b + Math.sqrt(cauculaDelta(resultado), 2) / 2 * a;
         x2 = - b - Math.sqrt(cauculaDelta(resultado), 2) / 2 * a;*/
 
-        double delta = calculaDelta(a, b, c);
-        double[] raizes = null;
+        Double delta = calculaDelta(a, b, c);
+        Double[] raizes = null;
 
         if (delta >= 0){
-            raizes = new double[2];
+            raizes = new Double[2];
 
             raizes[0] = (- b + Math.sqrt(delta))/ (2 * a);
 
             if (delta > 0)
-                raizes[0] = (- b + Math.sqrt(delta))/ (2 * a);
+                raizes[1] = (- b - Math.sqrt(delta))/ (2 * a);
             else
                 raizes[1] = raizes[0];
         }
